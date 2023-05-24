@@ -40,7 +40,7 @@ function extrairMetodosArquivoJS(caminhoArquivo) {
   // Percorrer a árvore sintática
   percorrerArvore(arvore, (no) => {
     if (no.type === 'FunctionDeclaration' || no.type === 'FunctionExpression' || no.type === 'ArrowFunctionExpression') {
-      const nomeMetodo = no.id.name || '[Anônimo]';
+      const nomeMetodo = no.id?.name || '[Anônimo]';
       const conteudoMetodo = codigo.substring(no.range[0], no.range[1]);
       metodos[nomeMetodo] = conteudoMetodo;
     }
