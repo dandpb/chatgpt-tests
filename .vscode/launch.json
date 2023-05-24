@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CHATGPT",
+      "type": "node",
+      "request": "launch",
+      "args": [
+        "./src/index.js"
+      ],
+      "runtimeArgs": [
+        "--nolazy",
+        "-r"
+      ],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "protocol": "inspector",
+      "env": {
+        "OPENAI_API_KEY":"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"
+      },
+    }
+  ]
+}
